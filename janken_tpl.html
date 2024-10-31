@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css">
+    <title>じゃんけん</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>じゃんけん</h1>
+    </header>
+
+    <main>
+        <ul>
+            <li id="gu_btn">グー</li>
+            <li id="cho_btn">チョキ</li>
+            <li id="par_btn">パー</li>
+        </ul>
+        <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
+        <div id="judgment">勝ち</div>
+    </main>
+   
+    <footer></footer>
+    <script>
+        const r = Math.ceil(Math.random()*3);
+        
+        
+        // クリックイベント
+        $("#gu_btn").on("click", function(){
+            $("#pc_hands").html(view);
+            $("#judgment").html(win);
+        });
+   
+        $("#cho_btn").on("click", function () {
+            $("#pc_hands").html(view);
+            $("#judgment").html(lose);
+            });
+
+        $("#par_btn").on("click", function () {
+            $("#pc_hands").html(view);
+            $("#judgment").html(tigh);
+            });
+
+        let view = "";
+        if(r == 1){
+                view = 'グー';
+        }
+
+        if (r == 2) {
+                view = 'チョキ';
+            }
+
+        if (r == 3) {
+                view = 'パー';
+            }
+        
+        // let shohai = "";
+        // if (r == 1) {
+        //         shohai1 = 'あいこだよ';
+        //     }
+  
+        // let  = "";
+        //     if (r == 2) {
+        //          = 'あなたの勝ち';
+        //     }
+        
+        // let  = "";
+        //     if (r == 3) {
+        //          = 'あなたの負け';
+        //     }
+        
+        // let  = "";
+        //     if (r == 1) {
+        //          = 'あなたの負け';
+        //     }
+
+        // let  = "";
+        //     if (r == 2) {
+        //          = 'あいこだよ';
+        //     }
+        
+        // let  = "";
+        //     if (r == 3) {
+        //          = 'あなたの勝ち';
+        //     }
+
+        // let  = "";
+        //     if (r == 1) {
+        //          = 'あなたの勝ち';
+        //     }
+        
+        // let  = "";
+        //     if (r == 2) {
+        //          = 'あなたの負け';
+        //     }
+        
+        // let  = "";
+        //     if (r == 3) {
+        //          = 'あいこだよ';
+        //     }
+    
+            let win = "";
+            if(r == 1){
+                win ='あいこだよ';
+            }
+
+            if(r == 2){
+                win = 'あなたの勝ち';
+            }
+
+            if(r == 3){
+                win = 'あなたの負け';
+            }
+
+            let lose ="";
+            if(r == 1){
+                lose = 'あなたの負け';
+            }
+
+            if(r == 2){
+                lose = 'あいこだよ';
+            }
+
+            if(r == 3){
+                lose = 'あなたの勝ち';
+            }
+
+            let tigh ="";
+            if(r == 1){
+                tigh = 'あなたの勝ち';
+            }
+
+            if(r == 2){
+                tigh = 'あなたの負け';
+            }
+
+            if(r == 3){
+                tigh = 'あいこだよ'
+            }
+    </script>
+</body>
+
+</html>
